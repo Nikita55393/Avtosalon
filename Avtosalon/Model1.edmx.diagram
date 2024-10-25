@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="79eaf56d16ec4050a0d62b13eb02afa0" Name="Diagram1">
+        <EntityTypeShape EntityType="AvtosalonModel.Автомобили" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Договор" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Доп_услуги" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Доп_услуги_авто" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Заявка" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Клиенты" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Коробка_передач" Width="1.5" PointX="1.5" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Кузов" Width="1.5" PointX="1.5" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Паспорт" Width="1.5" PointX="3.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Сотрудники" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Список_моделей" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Тип_пользователя" Width="1.5" PointX="3.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.ТО" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AvtosalonModel.Характеристики" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="AvtosalonModel.FK_Автомобили_Доп_услуги" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Автомобили_Список_моделей" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Автомобили_ТО" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Автомобили_Характеристики" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Доп_услуги_авто_Автомобили" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Заявка_Автомобили" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Договор_Заявка1" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Доп_услуги_авто_Доп_услуги" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Заявка_Клиенты" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Заявка_Сотрудники" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Клиенты_Паспорт" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Характеристики_Коробка_передач" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Характеристики_Кузов" ManuallyRouted="false" />
+        <AssociationConnector Association="AvtosalonModel.FK_Сотрудники_Тип_пользователя" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,88 @@
+﻿<Window x:Class="Avtosalon.Prodav"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtosalon"
+        mc:Ignorable="d"
+        Title="Sales Consultant" Height="450" Width="830" Loaded="Window_Loaded">
+    <Grid>
+        <Image x:Name="Image1" Source="img/consul.jpg" HorizontalAlignment="Left" Height="176" Margin="44,47,0,0" VerticalAlignment="Top" Width="182">
+            <Image.Clip>
+                <RectangleGeometry RadiusX="20" RadiusY="20" Rect="0,0,200,200"/>
+            </Image.Clip>
+        </Image>
+        <Button x:Name="back" Content="Назад" FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="52,363,0,0" VerticalAlignment="Top" Width="160" Height="34" Background="White" Foreground="Black" FontSize="18" BorderBrush="Black" Click="back_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox x:Name="txt1" HorizontalAlignment="Center" Height="22" Margin="0,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" FontSize="14" FontFamily="Century Gothic" BorderBrush="Black" IsEnabled="False"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Center" Height="22" Margin="0,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" FontSize="14" FontFamily="Century Gothic" BorderBrush="Black" IsEnabled="False"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="283,44,0,0" VerticalAlignment="Top" Width="37" FontFamily="Century Gothic"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="283,98,0,0" VerticalAlignment="Top" Width="48" FontFamily="Century Gothic"/>
+        <Button x:Name="But5" Content="Добавить клиента" FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="611,118,0,0" VerticalAlignment="Top" Height="34" Width="179" Background="#FF0047AB" Foreground="White" Click="But5_Click" BorderBrush="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="butauto" Content="Автомобили" FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="611,64,0,0" VerticalAlignment="Top" Height="34" Width="179" Background="#FF0047AB" Foreground="White" BorderBrush="White" Click="butauto_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Label Content="Должность" HorizontalAlignment="Left" Margin="283,152,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <TextBox x:Name="txt3" HorizontalAlignment="Center" Margin="0,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Height="22" FontSize="14" FontFamily="Century Gothic" BorderBrush="Black" IsEnabled="False"/>
+        <Button Content="Сформировать заявку" FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="611,172,0,0" VerticalAlignment="Top"  Height="34" Width="179" Background="#FF0047AB" Foreground="White" BorderBrush="White" Click="Button_Click_1">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Image Source="img/Nissan.png" HorizontalAlignment="Left" Height="186" VerticalAlignment="Top" Width="206" Margin="598,225,0,0"/>
+        <Border x:Name="bor" Margin="528,24,10,10" Background="White" CornerRadius="1" Height="NaN" Visibility="Hidden">
+            <Border.Effect>
+                <DropShadowEffect Color="Black" Direction="270" BlurRadius="30" ShadowDepth="2" Opacity="0.5"/>
+            </Border.Effect>
+            <Grid>
+                <Label Content="Регистрация клиента" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Century Gothic"/>
+                <Label Content="ФИО" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+                <TextBox x:Name="tx1" HorizontalAlignment="Center" Margin="0,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" Height="28" BorderBrush="#FF0047AB" FontFamily="Century Gothic" PreviewTextInput="tx1_PreviewTextInput" FontSize="14"/>
+                <Label Content="Телефон" HorizontalAlignment="Left" Margin="21,100,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+                <TextBox x:Name="tx2" HorizontalAlignment="Center" Margin="0,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="220" Height="28" BorderBrush="#FF0047AB" FontSize="16" FontFamily="Century Gothic" PreviewTextInput="tx2_PreviewTextInput"/>
+                <Label Content="Серия" HorizontalAlignment="Left" Margin="36,0,0,0" VerticalAlignment="Center" FontFamily="Century Gothic"/>
+                <Label Content="Номер" HorizontalAlignment="Left" Margin="146,187,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+                <TextBox x:Name="tx4" HorizontalAlignment="Left" Margin="146,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110" Height="28" BorderBrush="#FF0047AB" FontSize="16" FontFamily="Century Gothic" PreviewTextInput="tx4_PreviewTextInput"/>
+                <Label Content="Паспортные данные" HorizontalAlignment="Center" Margin="0,157,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="16"/>
+                <TextBox x:Name="tx3" HorizontalAlignment="Left" Margin="36,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96" Height="28" BorderBrush="#FF0047AB" FontSize="16" FontFamily="Century Gothic" PreviewTextInput="tx3_PreviewTextInput"/>
+                <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,305,0,0" VerticalAlignment="Top" Background="#FF0047AB" Foreground="White" Height="34" Width="198" FontSize="16" Click="Button_Click" FontFamily="Century Gothic">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Label Content="Дата выдачи" HorizontalAlignment="Left" Margin="21,239,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+                <DatePicker x:Name="pik" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Width="220" Height="28" BorderBrush="#FF0047AB" FontFamily="Century Gothic" FontSize="16"/>
+                <Button x:Name="b11" Content="Назад" FontFamily="Century Gothic" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" Width="160" Height="34" Background="White" Foreground="Black" FontSize="18" BorderBrush="Black" Click="b11_Click">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </Grid>
+
+        </Border>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<Window x:Class="Avtosalon.Remont"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Avtosalon"
+        mc:Ignorable="d"
+        Title="Technical maintenance" Height="450" Width="800">
+    <Grid>
+        <ListView x:Name="list1" d:ItemsSource="{d:SampleData ItemCount=1}" Margin="10,10,348,205" Loaded="list1_Loaded">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Image x:Name="imgMain" HorizontalAlignment="Left" Height="84" Margin="547,10,0,0" VerticalAlignment="Top" Width="145"/>
+        <TextBox x:Name="opis" HorizontalAlignment="Left" Height="100" Margin="10,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="442" IsEnabled="False" BorderBrush="Black" FontFamily="Century Gothic"/>
+        <Label Content="Описание:" FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="10,224,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="jan" HorizontalAlignment="Left" Margin="485,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="271" Height="81" IsEnabled="False" BorderBrush="Black" FontFamily="Century Gothic"/>
+        <TextBox x:Name="kat" HorizontalAlignment="Left" Margin="485,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" Height="22" IsEnabled="False" BorderBrush="Black" FontFamily="Century Gothic"/>
+        <Label Content="Характеристики" HorizontalAlignment="Left" Margin="486,154,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <Label Content="Модель" HorizontalAlignment="Left" Margin="486,101,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+        <Button x:Name="bt12" Content="Подтвердить прохождение ТО" HorizontalAlignment="Left" Margin="485,362,0,0" VerticalAlignment="Top" Width="271" Background="#FF0047AB" Foreground="White" Height="36" FontSize="16" FontFamily="Century Gothic" BorderBrush="White" Click="bt12_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="back" Content="Назад" FontFamily="Century Gothic" HorizontalAlignment="Left" Margin="38,362,0,0" VerticalAlignment="Top" Width="160" Height="36" Background="White" Foreground="Black" FontSize="18" BorderBrush="Black" Click="back_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <ComboBox x:Name="cb1" HorizontalAlignment="Left" Margin="486,302,0,0" VerticalAlignment="Top" Width="270" BorderBrush="Black" Height="28" FontFamily="Century Gothic"/>
+        <Label Content="Выбрать этап ТО" HorizontalAlignment="Left" Margin="485,272,0,0" VerticalAlignment="Top" FontFamily="Century Gothic"/>
+    </Grid>
+</Window>
